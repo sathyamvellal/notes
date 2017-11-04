@@ -16,7 +16,7 @@
 \usepackage{lipsum}
 \usepackage{booktabs}
 \usepackage{fontspec}
-%\setmainfont{Alegreya}
+\setmainfont{Alegreya}
 
 %\renewcommand{\familydefault}{\sfdefault}
 \lstset{basicstyle=\ttfamily\footnotesize,breaklines=true}
@@ -28,6 +28,10 @@
 \newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
 \newcommand{\lstpartialinputlisting}[3]{\lstinputlisting[firstnumber=#2,firstline=#2,lastline=#3]{#1}}
 
+\let\origtableofcontents\tableofcontents
+\let\origpagebreak\pagebreak
+\renewcommand{\pagebreak}{\onecolumn\origpagebreak\twocolumn}
+
 
 \setlength\parindent{0pt}
 
@@ -35,12 +39,15 @@
 
 \title{Notes on Computer Graphics}
 \author{Sathyam Vellal}
-\date{\today}
+\date{\today\\{\footnotesize (Created on November 3, 2017)}}
 
 \begin{document}
 \maketitle
+\tableofcontents
 
+\pagebreak
 \section{Fundamentals}
 
+\pagebreak
 \section{OpenGL}
 \end{document}
